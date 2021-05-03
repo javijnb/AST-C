@@ -1,0 +1,93 @@
+<nav class="navbar navbar-light" style="background-color: #c2ffc2;">
+    <div class="container-fluid">
+        <a class="navbar-brand">Modificación de un producto</a>
+      </div>
+</nav>
+
+<div class="margen ancho">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate=""> <!-- novalidate evita la validacion sobre HTML5 forzandolo a hacerlo con angular-->
+
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">ID de producto a modificar</span>
+            <input class="form-control" [(ngModel)]="ID" name="ID" required placeholder="1234">
+        </div>
+
+        <nav class="navbar navbar-light barra" style="background-color: #c2ffc2;">
+            <div class="container-fluid">
+                <a class="navbar-brand">Datos a modificar (un campo vacío conserva el valor previo a la modificación)</a>
+            </div>
+        </nav>
+
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+            <input class="form-control" [(ngModel)]="nombre" name="nombre" required placeholder="Pizza 5 quesos">
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Marca</span>
+            <input class="form-control" [(ngModel)]="marca" name="marca" required placeholder="Dr Oetker">
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Descripción</span>
+            <input class="form-control" [(ngModel)]="descripcion" name="descripcion" required placeholder="Nueva descripción">
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Sección</span>
+            <input class="form-control" [(ngModel)]="seccion" name="seccion" required placeholder="Nevera">
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Precio (€)</span>
+            <input class="form-control" [(ngModel)]="precio" name="precio" id="precio" required placeholder="5.17">
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Cantidad</span>
+            <input class="form-control" [(ngModel)]="cantidad" name="cantidad" id="cantidad" required placeholder="21">
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Fecha de caducidad</span>
+            <input class="form-control" [(ngModel)]="fecha_caducidad" name="fecha_caducidad" id="fecha_caducidad" placeholder="dd/mm/aaaa" required>
+        </div>
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">Procedencia</span>
+            <input class="form-control" [(ngModel)]="procedencia" name="procedencia" required placeholder="Alemania">
+        </div>
+        
+
+
+        <!--
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" [(ngModel)]="nombre" name="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Marca</label>
+            <input class="form-control" [(ngModel)]="marca" name="marca" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descripcion</label>
+            <input class="form-control" [(ngModel)]="descripcion" name="descripcion" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Seccion</label>
+            <input class="form-control" [(ngModel)]="seccion" name="seccion" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Precio</label>
+            <input class="form-control" [(ngModel)]="precio" name="precio" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Cantidad</label>
+            <input class="form-control" [(ngModel)]="cantidad" name="cantidad" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fecha de Caducidad</label>
+            <input class="form-control" [(ngModel)]="fecha_caducidad" name="fecha_caducidad" placeholder="dd/mm/aaaa" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Procedencia</label>
+            <input class="form-control" [(ngModel)]="procedencia" name="procedencia" required>
+        </div>
+        -->
+        
+        <input type="submit" class="btn btn-primary" value="Enviar">
+    </form>
+</div>

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light" style="background-color: #c2ffc2;">
+    <div class="container-fluid">
+        <a class="navbar-brand">Eliminación de un producto existente</a>
+      </div>
+</nav>
+
+<div class="margen ancho">
+    <form (ngSubmit)="onSubmit()" novalidate=""> <!-- novalidate evita la validacion sobre HTML5 forzandolo a hacerlo con angular-->
+
+        <!--
+        <div class="mb-3">
+            <label class="form-label">ID de producto</label>
+            <input class="form-control" [(ngModel)]="ID_producto" name="ID_producto" required>
+        </div>
+        -->
+        
+        <div class="input-group mb-3 margentop">
+            <span class="input-group-text" id="basic-addon1">ID de producto</span>
+            <input class="form-control" [(ngModel)]="ID_producto" name="ID_producto" required placeholder="1234">
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Enviar">
+    </form>
+</div>

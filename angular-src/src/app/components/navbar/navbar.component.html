@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark default barramolona">
+    <div class="container-fluid">
+      <a class="navbar-brand">Super-Stack</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" aria-current="page" [routerLink]="['']">Home</a>
+          </li>
+
+          <!--LISTADO DE ACCIONES DE ADMIN-->
+          <li *ngIf="admin" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" [routerLink]="['admin/registro']">Registrar</a>
+          </li>
+          <li *ngIf="admin" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" [routerLink]="['admin/consultar']">Listar</a>
+          </li>
+          <li *ngIf="admin" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" [routerLink]="['admin/modificar']">Modificar</a>
+          </li>
+          <li *ngIf="admin" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" [routerLink]="['admin/eliminar']">Eliminar</a>
+          </li>
+        
+          <!--LISTADO DE ACCIONES DE CLIENTE-->
+          <li *ngIf="cliente" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" >
+            <a class="nav-link" [routerLink]="['cliente/listararticulos']">Listar artículos</a>
+          </li>
+          <li *ngIf="cliente" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" >
+            <a class="nav-link" [routerLink]="['cliente/comprar']">Comprar</a>
+          </li>
+          <li *ngIf="cliente" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" >
+            <a class="nav-link" [routerLink]="['cliente/listarcompra']">Listar Compras</a>
+          </li>
+          <li *ngIf="cliente" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" >
+            <a class="nav-link" [routerLink]="['cliente/cancelarcompra']">Cancelar Compra</a>
+          </li>
+          </ul>
+
+          <!--Botones para cambio de ususario-->
+          <ul class="navbar-nav ml-auto">
+            <form (ngSubmit)="onSubmit('cliente')" novalidate="">
+                <button class="btn btn-outline-success" name="btn-cliente" type="submit" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['']">CLIENTE</button>
+            </form>
+
+            <form (ngSubmit)="onSubmit('admin')" novalidate="">
+              <button class="btn btn-outline-success" name="btn-admin" type="submit" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['']">ADMIN</button>
+            </form>
+          </ul>
+      </div>
+    </div>
+  </nav>

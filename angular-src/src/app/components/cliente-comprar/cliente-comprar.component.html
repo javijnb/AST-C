@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark default">
+    <div class="container-fluid">
+      <a class="navbar-brand">Compra de alimentos</a>
+    </div>
+</nav>
+
+<div class="margen ancho">
+<form (ngSubmit)="onSubmit()" novalidate=""> <!-- novalidate evita la validacion sobre HTML5 forzandolo a hacerlo con angular-->
+    <!--
+    <div class="mb-3">
+    <label class="form-label">ID de producto</label>
+    <input class="form-control" [(ngModel)]="ID_producto" name="ID_producto" required>
+    </div>
+    <div class="mb-3">
+    <label class="form-label">Nombre de producto</label>
+    <input class="form-control" [(ngModel)]="nombre_producto" name="nombre_producto" required>
+    </div>
+    <div class="mb-3">
+    <label class="form-label">Cantidad</label>
+    <input class="form-control" [(ngModel)]="cantidad" name="cantidad" required>
+    </div>
+    -->
+
+    <div class="input-group mb-3 margentop">
+        <span class="input-group-text" id="basic-addon1">ID de producto</span>
+        <input class="form-control" [(ngModel)]="ID_producto" name="ID_producto" placeholder="1234" required>
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Etiqueta de compra</span>
+        <input class="form-control" [(ngModel)]="nombre_producto" name="nombre_producto" placeholder="Pizza margarita" required>
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Cantidad</span>
+        <input class="form-control" [(ngModel)]="cantidad" name="cantidad" placeholder="2" required>
+    </div>
+    
+    <input type="submit" class="btn btn-primary" value="Enviar">
+</form>
+</div>

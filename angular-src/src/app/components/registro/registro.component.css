@@ -1,0 +1,24 @@
+.margen{
+    padding-left: 28px;
+}
+
+.margentop{
+    padding-top: 10px;
+}
+
+.ancho{
+    width: 720px;
+}
+
+.leftdiv
+{
+    min-width:100%;
+    max-width:800px;
+    float:left;
+}
+
+.rightdiv
+{
+    width:250px;
+    float:right;
+}

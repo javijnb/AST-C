@@ -1,0 +1,20 @@
+.barramolona{
+    background:linear-gradient(-45deg, #003300, #126812, #2c9b2c, #3fc63f);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    font-weight: 200;
+    color: azure;
+    text-align: center;
+}
+
+@keyframes gradient{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
